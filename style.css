@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Josefin+Slab:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Hind', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: rgb(111, 111, 219);
+    --cor-secundaria: rgb(182, 109, 246);
+    --cor-primaria-backgound:rgb(176, 165, 227);
+    --cor-secundaria-background:rgb(209, 255, 231);
+  }
+  
+
+
+html{
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+
+/* MENU */
+.contenedor-header {
+    background: radial-gradient(circle at 10% 20%, var(--cor-primaria) 0%, var(--cor-secundaria) 72.4%);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+
+  .contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+}
+
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #0a0a0a;
+    text-decoration: none;
+}
+
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor-header header nav ul li a{
+    color: #040404;
+    margin: 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover{
+    color: #f2adee;
+}
+
+.nav-responsive{
+    background-color: #61069a;
+    color:#fff;
+    padding: 5px 10px;
+   
+    cursor: pointer;
+    display: none;
+}
+
+/* SECCION I N I C I O */
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(img/fondo.jpeg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.inicio .contenido-banner{
+    padding: 20px;
+    background: linear-gradient(90deg, var(--cor-primaria-backgound) 0%, var(--cor-secundaria-background) 72.4%);
+    max-width: 350px;
+    margin: auto;
+    margin-bottom: 100px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.inicio .contenido-banner img{
+    margin-top: 40px;
+    border: 5px solid #030303;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.inicio .contenido-banner h1{
+    margin-top: 30px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.inicio .contenido-banner .redes a{
+    color: #0a0a0a;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #aea4e3;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.sobremi{
+    background: linear-gradient(90deg, var(--cor-primaria-backgound) 0%, var(--cor-secundaria-background) 72.4%);
+    color: #060606;
+    padding: 50px 20px;
+}
+
+.sobremi .contenido-seccion{
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.sobremi .contenido-seccion p{
+    margin-bottom: 20px;
+}
+
+/* SECCION S K I L L S */
+.skills{
+    background: linear-gradient(90deg, var(--cor-primaria-backgound) 0%, var(--cor-secundaria-background) 72.4%);
+    color: #030303;
+    padding: 50px 20px;
+}
+.skills .container{
+    display: grid;
+    justify-content: center;
+    max-width: 800px;   
+}
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+
+/* SECCION CURRICULUM */
+.curriculum{
+    background: linear-gradient(90deg, var(--cor-primaria-backgound) 0%, var(--cor-secundaria-background) 72.4%);
+    color: #070707;
+    padding: 50px 20px;
+}
+.curriculum .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.curriculum h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.curriculum button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #aea4e3;;
+    z-index: -1;
+    transition: 1s;
+}
+.curriculum button:hover .overlay{
+    width: 100%;
+}
+.curriculum button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #090909;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #040404;
+    position: relative;
+    z-index: 10;
+}
+
+.curriculum a {
+    color: #020202;
+    text-decoration: none;
+}
+
+footer{
+    background: radial-gradient(circle at 10% 20%, rgb(111, 111, 219) 0%, rgb(182, 109, 246) 72.4%);
+    color: #fff;
+    padding: 10px 0 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 5px;
+}
+footer .redes a{
+    color: #050505;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #f4f3f8;;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #61069a;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+
+    .inicio{
+    display: flex;
+    height: 82vh;
+    margin-top: 82px;
+    
+    }
+    .inicio .contenido-banner{
+   
+    max-width: 300px;
+    
+    }
+
+    .sobremi{
+        height: 90vh; 
+    }
+
+    .skills{
+        height: 30vh;  
+    }
+}
